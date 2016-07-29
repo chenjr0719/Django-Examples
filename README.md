@@ -8,7 +8,7 @@ A Simple Django Example from Django Girls
 
 **Django** is a powerful and convenient web framework for **Python**.
 
-It's goal is used to develop **database-driven** websites.
+Its goal is used to develop **database-driven** websites.
 
 According to this goal, it can ease to communicate to the database and manage the database in an easy way.
 
@@ -16,13 +16,13 @@ According to this goal, it can ease to communicate to the database and manage th
 
 The example is from **Django Girls 學習指南**.
 
-You can find the original ceontent: https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/
+You can find the original content: https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/
 
 Thanks to them **Django Girls**.
 
 ## How to Use?
 
-I suggest to use **Docker** to create the environment of **Django**.
+I suggest using **Docker** to create the environment of **Django**.
 
 You can use this **Docker** image: https://github.com/dockerfiles/django-uwsgi-nginx
 
@@ -31,7 +31,7 @@ sudo docker pull dockerfiles/django-uwsgi-nginx
 sudo docker run -itd -p 80:80 -v $APP_DIR:/home/docker/code/app/ dockerfiles/django-uwsgi-nginx
 ```
 
-Then, you have to modify **uwsgi.ini** in container.
+Then, you have to modify **uwsgi.ini** in the container.
 
 ```$
 sudo docker exec -it $CONTAINER_ID bash
@@ -43,7 +43,7 @@ Modify the setting under **base**.
 module=$APP_NAME.wsgi:application
 ```
 
-After the modification, you have to restart you container.
+After the modification, you have to restart your container.
 
 ```$
 sudo docker restart $CONTAINER_ID
