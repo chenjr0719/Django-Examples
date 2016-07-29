@@ -53,6 +53,6 @@ Now, you can check the result at: http://localhost
 
 ## TO-DO
 
-This example is quiet simple.
+This example is quite simple.
 
 Maybe I will add some different features when I have any idea.
