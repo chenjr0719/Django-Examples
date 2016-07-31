@@ -14,7 +14,7 @@ According to this goal, it can ease to communicate to the database and manage th
 
 ## About This Examples
 
-The example is from **Django Girls 學習指南**.
+The first example is from **Django Girls 學習指南**.
 
 You can find the original content: https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/
 
@@ -28,10 +28,12 @@ You can use this **Docker** image: https://github.com/dockerfiles/django-uwsgi-n
 
 ```$
 sudo docker pull dockerfiles/django-uwsgi-nginx
-sudo docker run -itd -p 80:80 -v $APP_DIR:/home/docker/code/app/ dockerfiles/django-uwsgi-nginx
+sudo docker run -itd -p 80:80 -v $PROJECT_DIR:/home/docker/code/app/ dockerfiles/django-uwsgi-nginx
 ```
 
-Then, you have to modify **uwsgi.ini** in the container.
+In default, you don't modify any setting.
+
+But, if you want to use your django project, you have to modify **uwsgi.ini** in the container.
 
 ```$
 sudo docker exec -it $CONTAINER_ID bash
@@ -40,7 +42,7 @@ vi /home/docker/code/uwsgi.ini
 
 Modify the setting under **base**.
 ```$
-module=$APP_NAME.wsgi:application
+module=$PROJECT_NAME.wsgi:application
 ```
 
 After the modification, you have to restart your container.

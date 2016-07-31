@@ -1,4 +1,4 @@
-"""djangogirls URL Configuration
+"""website URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from trips.views import home, post_detail
+
+from examples.views import examples_index
+from trips.views import trips_home, trips_post_detail
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', home),
-    url(r'^post/(?P<pk>\d+)/$', post_detail, name='post_detail'),
+
+    url(r'^$', examples_index),
+
+    url(r'^trips/$', trips_home),
+    url(r'^trips/post/(?P<pk>\d+)/$', trips_post_detail, name='post_detail'),
 ]
