@@ -18,7 +18,7 @@ The first example is from **Django Girls 學習指南**.
 
 You can find the original content: https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/
 
-Thanks to them **Django Girls**.
+Thanks to them.
 
 
 The second example is about **POST** and **GET**.
