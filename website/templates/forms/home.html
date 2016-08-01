@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{% include "navbar.html" with active_tab='Forms' %}
+{% endblock %}
+
+{% block title %} - Leave Message{% endblock %}
+
+{% block content %}
+<div class="row">
+
+    <div class="col-md-6">
+        <h3>POST Example</h3>
+        <h4>Leave message by POST.</h4>
+        {% if post_form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+        {% endif %}
+
+        {% if message %}
+        <div>
+            {{ message }}
+        </div>
+        {% endif %}
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{ post_form.as_table }}
+            </table>
+            </br>
+            <input type="submit" value="Submit" class="btn btn-lg btn-primary">
+        </form>
+
+    </div>
+
+    <div class="col-md-6">
+        <h3>GET Example</h3>
+        <h4>Query messages by GET.</h4>
+        <form action="" method="get">
+            <table>
+                {{ get_form.as_table }}
+            </table>
+            </br>
+            <input type="submit" value="Query" class="btn btn-lg btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}

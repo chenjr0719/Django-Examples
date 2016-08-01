@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{% include "navbar.html" with active_tab='Forms' %}
+{% endblock %}
+
+{% block title %} - Thanks{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h1>Thanks for your message!</h1>
+    <a href="/forms/" class="btn btn-lg btn-primary" role="button">Back to Forms</a>
+</div>
+{% endblock %}

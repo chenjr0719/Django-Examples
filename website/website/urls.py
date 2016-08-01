@@ -18,6 +18,7 @@ from django.contrib import admin
 
 from examples.views import examples_index
 from trips.views import trips_home, trips_post_detail
+from forms.views import forms_home, forms_thanks
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +27,8 @@ urlpatterns = [
 
     url(r'^trips/$', trips_home),
     url(r'^trips/post/(?P<pk>\d+)/$', trips_post_detail, name='post_detail'),
+
+    url(r'^forms/$', forms_home),
+    url(r'^forms/thanks/$', forms_thanks),
+
 ]

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{% include "navbar.html" with active_tab='Forms' %}
+{% endblock %}
+
+{% block title %} - Query Result{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h3>Query Result</h3>
+    {% for message in message_list %}
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <td>{{ message.id }}</td>
+                </tr>
+                <tr>
+                    <th>Subject</th>
+                    <td>{{ message.subject }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ message.email }}</td>
+                </tr>
+                <tr>
+                    <th>Message</th>
+                    <td>{{ message.message }}</td>
+                </tr>
+                <tr>
+                    <th>Time</th>
+                    <td>{{ message.created_at }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </br>
+    {% endfor %}
+    <a href="/forms/" class="btn btn-lg btn-primary">Back to Forms</a>
+</div>
+{% endblock %}

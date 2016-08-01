@@ -20,6 +20,13 @@ You can find the original content: https://djangogirlstaipei.gitbooks.io/django-
 
 Thanks to them **Django Girls**.
 
+
+The second example is about **POST** and **GET**.
+
+You can find the detail explanation at official docs.
+
+https://docs.djangoproject.com/en/1.9/topics/forms/
+
 ## How to Use?
 
 I suggest using **Docker** to create the environment of **Django**.
