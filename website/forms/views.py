@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from forms.models import Message, MessageForm
-from forms.form import QueryForm
+from .models import Message, MessageForm
+from .forms import QueryForm
 
 # Create your views here.
 
