@@ -8,15 +8,15 @@
 
 {% block content %}
 <div class="row">
+    <h3 style="color: red">Warning!! You are trying to DELETE this article!!</h3>
     <form action="" method="post" class="form-horizontal">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
         </br>
-        <input type="submit" value="Update" class="btn btn-lg btn-primary">
+        <input type="submit" value="Confirm" class="btn btn-lg btn-danger">
         <a href="/Simple_CMS" class="btn btn-lg btn-success">Cancel</a>
-        <a href="{% url 'CMS_delete' id=article.id %}" class="btn btn-lg btn-danger">Delete</a>
     </form>
 </div>
 {% endblock %}

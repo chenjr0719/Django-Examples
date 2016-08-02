@@ -27,6 +27,17 @@ You can find the detail explanation at official docs.
 
 https://docs.djangoproject.com/en/1.9/topics/forms/
 
+
+The third example is about **CRUD**.
+
+This example implement a **Simple CMS**.
+
+You can **add**, **edit**, **view**, and **delete** article in this example.
+
+Every article use **Markdown**> to present the content. About **Markdown**, you can reference: https://github.com/adam-p/markdown-here/wiki/Markdown
+
+I use [Mistune](https://github.com/lepture/mistune) to parser the **Markdown**>, thanks to **lepture** create this library.
+
 ## How to Use?
 
 I suggest using **Docker** to create the environment of **Django**.

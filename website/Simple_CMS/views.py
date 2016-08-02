@@ -25,6 +25,11 @@ def CMS_add(request):
 
     return render(request, 'Simple_CMS/add.html', locals())
 
+def CMS_detail(request, id):
+    article = Article.objects.get(pk = id)
+
+    return render(request, 'Simple_CMS/article.html', locals())
+
 def CMS_edit(request, id):
     article = Article.objects.get(pk = id)
     if request.method == 'POST':
@@ -33,6 +38,7 @@ def CMS_edit(request, id):
             cd = form.cleaned_data
             message = 'Contact success!'
             form.save()
+
             return HttpResponseRedirect('/Simple_CMS/')
 
     else:
@@ -40,7 +46,14 @@ def CMS_edit(request, id):
 
     return render(request, 'Simple_CMS/edit.html', locals())
 
-def CMS_detail(request, id):
+def CMS_delete(request, id):
     article = Article.objects.get(pk = id)
+    if request.method == 'POST':
+        article.delete()
 
-    return render(request, 'Simple_CMS/article.html', locals())
+        return HttpResponseRedirect('/Simple_CMS/')
+
+    else:
+        form = ArticleForm(initial = model_to_dict(article))
+
+    return render(request, 'Simple_CMS/delete.html', locals())

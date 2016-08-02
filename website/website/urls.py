@@ -19,7 +19,7 @@ from django.contrib import admin
 from examples.views import examples_index
 from trips.views import trips_home, trips_post_detail
 from forms.views import forms_home, forms_thanks
-from Simple_CMS.views import CMS_home, CMS_add, CMS_edit, CMS_detail
+from Simple_CMS.views import CMS_home, CMS_add, CMS_detail, CMS_edit, CMS_delete
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -34,7 +34,8 @@ urlpatterns = [
 
     url(r'^Simple_CMS/$', CMS_home),
     url(r'^Simple_CMS/add$', CMS_add),
-    url(r'^Simple_CMS/article/(?P<id>\d+)/edit$', CMS_edit, name = 'CMS_edit'),
     url(r'^Simple_CMS/article/(?P<id>\d+)/$', CMS_detail, name = 'CMS_detail'),
+    url(r'^Simple_CMS/article/(?P<id>\d+)/edit$', CMS_edit, name = 'CMS_edit'),
+    url(r'^Simple_CMS/article/(?P<id>\d+)/delete$', CMS_delete, name = 'CMS_delete'),
 
 ]
