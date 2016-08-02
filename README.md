@@ -20,6 +20,7 @@ You can find the original content: https://djangogirlstaipei.gitbooks.io/django-
 
 Thanks to them.
 
+---
 
 The second example is about **POST** and **GET**.
 
@@ -27,6 +28,7 @@ You can find the detail explanation at official docs.
 
 https://docs.djangoproject.com/en/1.9/topics/forms/
 
+---
 
 The third example is about **CRUD**.
 
