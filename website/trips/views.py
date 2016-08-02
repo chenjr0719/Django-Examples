@@ -1,8 +1,8 @@
 from django.shortcuts import render
+from .models import Post
 
 # Create your views here.
 
-from .models import Post
 
 
 def trips_home(request):

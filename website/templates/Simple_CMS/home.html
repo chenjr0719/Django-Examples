@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{% include "navbar.html" with active_tab='Simple_CMS' %}
+{% endblock %}
+
+{% block title %} - Simple CMS{% endblock %}
+
+{% load custom_filter %}
+
+{% block content %}
+<div class="row">
+    <div class="row">
+        <div class="col-md-10">
+            <h3>Article List</h3>
+        </div>
+        <div class="col-md-2">
+            <a href="/Simple_CMS/add" class="btn btn-lg btn-primary" role="button">Add</a>
+        </div>
+    </div>
+    {% for article in article_list %}
+        {% if forloop.counter|Remainder:3 == 1 %}
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>{{ article.Title }}</h2>
+                    <p>{{ article.Content|MDParser|safe }}</p>
+                    <a href="{% url 'CMS_detail' id=article.id %}" class="btn btn-md btn-info" role="button">Read</a>
+                </div>
+        {% elif forloop.counter|Remainder:3 == 2 %}
+                <div class="col-lg-4">
+                    <h2>{{ article.Title }}</h2>
+                    <p>{{ article.Content|MDParser|safe }}</p>
+                    <a href="{% url 'CMS_detail' id=article.id %}" class="btn btn-md btn-info" role="button">Read</a>
+                </div>
+        {% else %}
+                <div class="col-lg-4">
+                    <h2>{{ article.Title }}</h2>
+                    <p>{{ article.Content|MDParser|safe }}</p>
+                    <a href="{% url 'CMS_detail' id=article.id %}" class="btn btn-md btn-info" role="button">Read</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

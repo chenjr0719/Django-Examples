@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{% include "navbar.html" with active_tab='Simple_CMS' %}
+{% endblock %}
+
+{% block title %} - Simple CMS - Add New Article{% endblock %}
+
+{% block content %}
+<div class="row">
+    <form action="" method="post" class="form-horizontal">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        </br>
+        <input type="submit" value="Submit" class="btn btn-lg btn-primary">
+        <a href="/Simple_CMS" class="btn btn-lg btn-success">Cancel</a>
+    </form>
+</div>
+{% endblock %}

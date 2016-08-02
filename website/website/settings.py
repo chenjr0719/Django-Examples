@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'examples',
     'trips',
     'forms',
+    'Simple_CMS',
 ]
 
 MIDDLEWARE_CLASSES = [

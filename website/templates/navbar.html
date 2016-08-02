@@ -1,18 +1,22 @@
 <div class="navbar-wrapper">
-  <div class="container">
-    <nav class="navbar navbar-inverse navbar-fixed-top nav-justified">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Jacob's Django Examples</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li {% if active_tab == "About" %} class="active" {% endif %}><a href="/">About</a></li>
-            <li {% if active_tab == "Trips" %} class="active" {% endif %}><a href="/trips/">Trips</a></li>
-            <li {% if active_tab == "Forms" %} class="active" {% endif %}><a href="/forms/">Forms</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top nav-justified">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Jacob's Django Examples</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li {% if active_tab == "About" %} class="active" {% endif %}><a href="/">About</a></li>
+                    <li {% if active_tab == "Trips" %} class="active" {% endif %}><a href="/trips/">Trips</a></li>
+                    <li {% if active_tab == "Forms" %} class="active" {% endif %}><a href="/forms/">Forms</a></li>
+                    <li {% if active_tab == "Simple_CMS" %} class="active" {% endif %}><a href="/Simple_CMS/">Simple CMS</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/admin">Admin</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 </div>

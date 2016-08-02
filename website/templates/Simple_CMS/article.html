@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+{% include "navbar.html" with active_tab='Simple_CMS' %}
+{% endblock %}
+
+{% block title %} - Simple CMS{% endblock %}
+
+{% load custom_filter %}
+
+{% block content %}
+<div class="row">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>{{ article.Title }}</h1>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'CMS_edit' id=article.id %}" class="btn btn-lg btn-primary" role="button">Edit</a>
+        </div>
+    </div>
+    <p>{{ article.Content|MDParser|safe }}</p>
+    </br>
+    <a href="/Simple_CMS/" class="btn btn-lg btn-primary" role="button">Back to Article List</a>
+    </br>
+</div>
+{% endblock %}
