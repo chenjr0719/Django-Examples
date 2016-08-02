@@ -14,6 +14,8 @@ According to this goal, it can ease to communicate to the database and manage th
 
 ## About This Examples
 
+---
+
 The first example is from **Django Girls 學習指南**.
 
 You can find the original content: https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/
@@ -36,9 +38,9 @@ This example implement a **Simple CMS**.
 
 You can **add**, **edit**, **view**, and **delete** article in this example.
 
-Every article use **Markdown**> to present the content. About **Markdown**, you can reference: https://github.com/adam-p/markdown-here/wiki/Markdown
+Every article use **Markdown** to present the content. About **Markdown**, you can reference: https://github.com/adam-p/markdown-here/wiki/Markdown
 
-I use [Mistune](https://github.com/lepture/mistune) to parser the **Markdown**>, thanks to **lepture** create this library.
+I use [Mistune](https://github.com/lepture/mistune) to parser the **Markdown**, thanks to **lepture** create this library.
 
 ## How to Use?
 
