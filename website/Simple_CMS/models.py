@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django.forms import ModelForm
+import re
 
 # Create your models here.
 
@@ -19,7 +21,12 @@ class ArticleForm(ModelForm):
 
     def clean_message(self):
         content = self.cleaned_data['Content']
-        num_words = len(content.split())
+
+        if re.match("[\u4e00-\u9fa5]+", message):
+            num_words = len(message)
+        else :
+            num_words = len(message.split())
+
         if num_words < 4:
             raise forms.ValidationError("Not enough words! You have to leave at least 4 words!")
         return content
