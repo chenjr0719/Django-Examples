@@ -38,9 +38,11 @@ This example implement a **Simple CMS**.
 
 You can **add**, **edit**, **view**, and **delete** article in this example.
 
-Every article use **Markdown** to present the content. About **Markdown**, you can reference: https://github.com/adam-p/markdown-here/wiki/Markdown
+Every article use **Markdown** to present the content.
 
-I use [Mistune](https://github.com/lepture/mistune) to parser the **Markdown**, thanks to **lepture** who create this library.
+About **Markdown**, you can reference: https://github.com/adam-p/markdown-here/wiki/Markdown
+
+I use [Mistune](https://github.com/lepture/mistune) to parser the **Markdown**, thanks to **lepture** who create this module.
 
 ## How to Use?
 
